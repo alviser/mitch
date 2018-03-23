@@ -30,7 +30,7 @@ Mitch has been tested with ***python 3.6.3*** and the `genson` package and ***Fi
 * click on the detective icon
 * click on `export as Json`
 * select a location to save the file to (e.g. `json-go-here/`)
-* name the file `site_alice.json` and save it
+* name the file `site_alice.json` and save it (you can change the `site`, but you have to keep the `_alice.json` part of the name)
 * press `SHIFT+CTRL+A` again to switch back to the Add-ons window, and click `Disable` button on the request labeller add-on
 * logout from Alice account
 
@@ -49,16 +49,16 @@ Mitch has been tested with ***python 3.6.3*** and the `genson` package and ***Fi
 * click on the detective icon
 * click on `export as Json`
 * select a location to save the file to (e.g. `json-go-here/`)
-* name the file `site_bob.json` and save it
+* name the file `site_bob.json` and save it (you can change the `site`, but you have to keep the `_bob.json` part of the name)
 * press `SHIFT+CTRL+A` again to switch back to the Add-ons window, and click `Disable` button on the request labeller add-on
 * logout from Bob account
 
 ### step 8: do the tests as Alice - again
-* repeat all actions in step 7 logging in again as Alice, and save the navigation as `site_alice1.json`
+* repeat all actions in step 7 logging in again as Alice, and save the navigation as `site_alice1.json` (you can change the `site`, but you have to keep the `_alice1.json` part of the name)
 * logout from Alice account
 
 ### step 9: do the tests as unauthenticated user
-* repeat all actions in step 7 without logging in and save the navigation as `site_unauth.json`
+* repeat all actions in step 7 without logging in and save the navigation as `site_unauth.json` (you can change the `site`, but you have to keep the `_unauth.json` part of the name)
 
 ### step 10: find CSRFs! (or not, hopefully ;) )
 * from a console launch `python guess_csrfs.py -s json-go-here/ -n site`
