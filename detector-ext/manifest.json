@@ -1,0 +1,25 @@
+{
+   "manifest_version": 2,
+
+   "name": "Request labeller",
+   "description": "Logs HTTP navigation requests and labels them",
+   "version": "0.5",
+
+   "browser_action": {
+      "default_icon": "tracker.png",
+      "default_popup": "popup.html"
+   },
+
+   "background": {
+      "scripts": [
+         "classifier.min.js",
+         "background.js"
+      ]
+   },
+
+   "permissions": [
+      "webRequest",
+      "webRequestBlocking",
+      "<all_urls>"
+   ]
+}

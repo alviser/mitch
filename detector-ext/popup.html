@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+		body {
+		   min-height: 	300px;
+		   width: 		1000px;
+		   overflow-x: 	scroll;
+		   overflow-y: 	scroll;
+		}
+
+		div.actions {
+			display: inline;
+		}
+
+		div.actions span {
+			width: 3em;
+			text-align: center;
+			border: 1px solid black;
+			cursor: pointer;
+			display: inline-table;
+		}
+
+		.sensitive {
+			background-color: #80000038;
+		}
+
+		.nonsensitive {
+			background-color: #00800038;
+		}
+
+		.maybesensitive {
+			background-color: #FFFF0038;
+		}
+
+		.unflagged {
+			background-color: #FFFFFF;
+		}
+
+		ul {
+			list-style: none;
+			padding: 	0px;
+			margin: 	0px;
+			display: 	inline-block;
+		}
+
+		li { 
+		   font-family: monospace;
+		   white-space: pre;
+		   width: 		100%;
+		   font-size:	1em;
+		}
+
+		li:hover {
+		   margin-bottom: 1px solid black;
+		}
+
+		#export_json {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+		}
+
+		#cleanup {
+			float: left;
+		}
+
+		#counter {
+			float: left;
+		}
+
+		#bottom_link {
+			position: absolute;
+			top: 3em;
+			right: 0px;
+		}
+
+		input {
+			width: 5rem;
+		}
+
+		h1 {
+			margin-top: .5em;
+			clear: both;
+		}
+		</style>
+	</head>
+<body>
+	<button id="export_json">export as Json</button><button id="cleanup">cleanup</button>
+	<div id="counter"></div>
+	<h1>Labelled HTTP Requests</h1>
+	<div id="bottom_link"><a href="#bottom">go to bottom</a></div>
+	<ul id="rlist">
+	</ul>
+	<div id="bottom"></div>
+	<script type="text/javascript" src="popup.js"></script>
+</body>
+</html>
