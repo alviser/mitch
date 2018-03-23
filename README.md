@@ -42,8 +42,8 @@ Mitch has been tested with ***python 3.6.3*** and ***Firefox 58***
 
 ### step 7: do the tests as Bob
 * in a fresh tab log in using Bob (account B) credentials
-* go to the tab with the file you opened in step 6
 * press `SHIFT+CTRL+A` to switch back to the Add-ons window, and click `Enable` button on the request labeller add-on
+* go to the tab with the file you opened in step 6
 * click on all the `test CSRF` buttons you find in the page
 * notice that the detective is collecting data
 * click on the detective icon
