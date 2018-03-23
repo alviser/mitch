@@ -4,7 +4,7 @@ a Machine Learning powered CSRF attacks finding tool
 Please find below the usage instructions of the current prototype. We are currently porting all the Python logic to JavaScript to include the full set of functionalities directly inside the extension and improve its usability. We will release Mitch as opensource software when this process is complete.
 
 ## System Requirements
-Mitch has been tested with ***python 3.6.3*** and ***Firefox 58***
+Mitch has been tested with ***python 3.6.3*** and the `genson` package and ***Firefox 58***
 
 ## How to use it
 
