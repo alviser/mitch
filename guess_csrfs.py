@@ -5,6 +5,7 @@ import json
 import sys
 import argparse
 import genson
+import cgi
 
 def get_options(cmd_args=None):
     """
