@@ -24,7 +24,7 @@ Mitch has been tested with ***python 3.6.3*** and ***Firefox 58***
 * notice the detective icon near the address bar 
 
 ### step 3: perform navigation
-* browse the website as much as you want, expecially excercising security critical operations (change password, add friends, whatever... )
+* browse the website as much as you want, expecially excercising security critical operations (change password, add friends, whatever... ). A red exclamation mark on the detective icon means it is collecting data.
 
 ### step 4: save labelled navigation
 * click on the detective icon
@@ -40,10 +40,27 @@ Mitch has been tested with ***python 3.6.3*** and ***Firefox 58***
 ### step 6: load tests into Firefox
 * open the file in `put-tests-here/site_alice.json.html` with Firefox
 
-### step 7: repeat navigations
-* repeat steps 2,3,4 using Bob (account B) credentials, Alice credentials for a second time, and without logging in respectively and saving JSONs as `json-go-here/site_bob.json`,`json-go-here/site_alice1.json` and `json-go-here/site_unauth.json`
+### step 7: do the tests as Bob
+* in a fresh tab log in using Bob (account B) credentials
+* go to the tab with the file you opened in step 6
+* press `SHIFT+CTRL+A` to switch back to the Add-ons window, and click `Enable` button on the request labeller add-on
+* click on all the `test CSRF` buttons you find in the page
+* notice that the detective is collecting data
+* click on the detective icon
+* click on `export as Json`
+* select a location to save the file to (e.g. `json-go-here/`)
+* name the file `site_bob.json` and save it
+* press `SHIFT+CTRL+A` again to switch back to the Add-ons window, and click `Disable` button on the request labeller add-on
+* logout from Bob account
 
-### step 8: find CSRFs! (or not, hopefully ;) )
+### step 8: do the tests as Alice - again
+* repeat all actions in step 7 logging in again as Alice, and save the navigation as `site_alice1.json`
+* logout from Alice account
+
+### step 9: do the tests as unauthenticated user
+* repeat all actions in step 7 without logging in and save the navigation as `site_unauth.json`
+
+### step 10: find CSRFs! (or not, hopefully ;) )
 * from a console launch `python guess_csrfs.py -s json-go-here/ -n site`
 * enjoy the results
 
