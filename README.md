@@ -24,7 +24,7 @@ Please ensure to have two user accounts Alice and Bob on the website to test
 
 7. Launch python guess_csrfs.py -s json-directory/ -n mysite and check the report
 
-If something does not work as expected, please refer to the "Detailed explanation" section.
+If something does not work as expected, please refer to the [Detailed Usage](https://github.com/alviser/mitch/blob/master/DETAILED_USAGE.md) file.
 
 ---
 
