@@ -20,7 +20,7 @@ Please ensure to have two user accounts Alice and Bob on the website to test
 
 5. Open the generated HTML file in Firefox
 
-6. Re-enable the extension and click all the generated links. Export the JSON as mysite_unauth.json. Repeat the same process after authenticating as Bob and Alice again: the corresponding JSON files should be named `mysite_bob.json` and `mysite_alice1.json` respectively. Place all the exported JSON files in `json-directory/`
+6. Re-enable the extension and click all the generated links. Export the JSON as `mysite_unauth.json`. Repeat the same process after authenticating as Bob and Alice again: the corresponding JSON files should be named `mysite_bob.json` and `mysite_alice1.json` respectively. Place all the exported JSON files in `json-directory/`
 
 7. Launch `python guess_csrfs.py -s json-directory/ -n mysite` and check the report
 
