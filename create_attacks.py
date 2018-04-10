@@ -76,36 +76,36 @@ def main(options):
 
 	# loading data
 	for filename in os.listdir(options['source_dir']):
+		if filename.endswith("json"):
+			sitename = ".".join(filename.split(".")[:-2])
 
-		sitename = ".".join(filename.split(".")[:-2])
+			print("working on: " + sitename + " / " + filename)
 
-		print("working on: " + sitename + " / " + filename)
+			j = json.load(codecs.open(options['source_dir'] + filename, encoding='utf-8'))
+			outfile = open(options['output_dir'] + filename + ".html","w")
+			
+			# webpage preamble
+			outfile.write("<html>\n")
+			outfile.write("<head>\n")
+			outfile.write("<style>\n")
+			outfile.write(".responseBody { display: none; max-height: 800px; overflow: scroll; background-color: #cccccc;}\n")
+			outfile.write("</style>\n")
+			outfile.write("<title>" + filename + " attack ground</title>")
+			outfile.write("</head>\n")
+			outfile.write("<body>\n")
+			outfile.write("<h1>CSRF tests for " + sitename + "</h1>\n")
+			outfile.write("please make sure you are logged in to the website in another tab<br />")
 
-		j = json.load(codecs.open(options['source_dir'] + filename, encoding='utf-8'))
-		outfile = open(options['output_dir'] + filename + ".html","w")
-		
-		# webpage preamble
-		outfile.write("<html>\n")
-		outfile.write("<head>\n")
-		outfile.write("<style>\n")
-		outfile.write(".responseBody { display: none; max-height: 800px; overflow: scroll; background-color: #cccccc;}\n")
-		outfile.write("</style>\n")
-		outfile.write("<title>" + filename + " attack ground</title>")
-		outfile.write("</head>\n")
-		outfile.write("<body>\n")
-		outfile.write("<h1>CSRF tests for " + sitename + "</h1>\n")
-		outfile.write("please make sure you are logged in to the website in another tab<br />")
+			# tests construction
+			for r in j:
+				if r['flag'] == 'y':
+					createTest(r,outfile)
+					
+			# webpage closure
+			outfile.write("</body>\n")
+			outfile.write("</html>\n")
 
-		# tests construction
-		for r in j:
-			if r['flag'] == 'y':
-				createTest(r,outfile)
-				
-		# webpage closure
-		outfile.write("</body>\n")
-		outfile.write("</html>\n")
-
-		outfile.close()
+			outfile.close()
 
 if __name__ == "__main__":
     sys.exit(main(get_options()))
