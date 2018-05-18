@@ -1,8 +1,6 @@
 # mitch-ext
 a Machine Learning powered CSRF attacks finding tool - standalone Firefox Extension
 
-you can either use the `mitch-ext.zip` prepackaged extension, or clone the directory and load it via the temporary add-ons Firefox function
-
 ## System Requirements
 the Mitch extension has been developed and tested with Firefox 61.0b4
 
