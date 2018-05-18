@@ -1,0 +1,32 @@
+{
+   "manifest_version": 2,
+
+   "name": "MITCH - the CSRF guard",
+   "description": "discover possible CSRF attacks on a website",
+   "version": "0.5",
+
+   "browser_action": {
+      "default_icon": "tracker.png",
+      "default_popup": "popup.html"
+   },
+
+   "background": {
+      "scripts": [
+         "sensitivity.js",
+         "guess_csrfs.js",
+         "json-schema-infer.js",
+         "classifier.min.js",
+         "background.js"
+      ]
+   },
+
+   "icons": {
+      "48": "mitch48.png"
+   },
+
+   "permissions": [
+      "webRequest",
+      "webRequestBlocking",
+      "<all_urls>"
+   ]
+}
