@@ -30,8 +30,14 @@ If something does not work as expected, please refer to the [Detailed Usage](htt
 
 ## Contents of the repository
 
+### mitch-ext/
+Contains the standalone Firefox extension to test a website for CSRFs
+
+### dataset/
+Contains the sanitized labelled dataset used to train the classifier
+
 ### detector-ext/
-It contains the Firefox extension to label navigation requests and the classifier code 
+Contains the Firefox extension to label navigation requests and the classifier code 
 
 #### usage
 Load it in Firefox and activate it if necessary.
