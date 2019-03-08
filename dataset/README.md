@@ -1,4 +1,4 @@
-# dataset used in Mitch
+# datasets used in Mitch
 This directory contains the datasets used in the paper "Mitch: A Machine Learning Approach to the Black-Box Detection of CSRF Vulnerabilities", published at IEEE EuroS&P 2019. It includes the following files:
 - dataset.json: raw HTTP requests collected using HTTP-Tracker
 - dataset_prettified.json: the same raw HTTP requests formatted in a more readable way
